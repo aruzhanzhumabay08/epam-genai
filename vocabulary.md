@@ -1,9 +1,9 @@
 # My GenAI Vocabulary
 
-By Aruzhan Zhumabay
-EPAM Tech Orda — GenAI for Software Development, Introduction module
+Aruzhan Zhumabay
+EPAM Tech Orda — GenAI for Software Development
 
-These are the terms I kept running into while writing my report. I wrote each one in my own words, the way I'd explain it to a friend who's also just starting. I'll keep adding to this list as the course goes on.
+These are the terms I kept running into while writing my report.
 
 1. **Generative AI** — AI that makes new things (text, code, pictures) instead of just sorting or labeling what already exists.
 
@@ -23,7 +23,7 @@ These are the terms I kept running into while writing my report. I wrote each on
 
 9. **Context window** — how much text the model can keep in its "head" at once. If a document is too long, it won't all fit.
 
-10. **Inference** — the moment the trained model actually gives you an answer (as opposed to when it was being trained).
+10. **Inference** — the moment the trained model actually gives you an answer.
 
 11. **Embedding** — turning text into a list of numbers so the computer can tell which pieces of text mean similar things.
 
@@ -31,7 +31,7 @@ These are the terms I kept running into while writing my report. I wrote each on
 
 13. **Temperature** — a dial for how creative vs. predictable the answers are. Low = safe and boring, high = more random.
 
-14. **Copilot** — an AI helper that works next to you (often a programmer) and suggests the next step.
+14. **Copilot** — an AI helper that works next to you and suggests the next step.
 
 15. **Grounding** — tying the AI's answers to real, trusted sources so it's less likely to invent things.
 
