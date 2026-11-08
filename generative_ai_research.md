@@ -1,17 +1,17 @@
 # Research on Generative AI Applications
 
-By Aruzhan Zhumabay
-EPAM Tech Orda — GenAI for Software Development, Introduction module
+Aruzhan Zhumabay
+EPAM Tech Orda — GenAI for Software Development
 
-## Why I picked these cases
+## Why choose these cases
 
 I'm new to this field, so for this report I looked at where generative AI is actually being used today, not just the theory. I focused on six areas that kept coming up while I was reading. For each one I tried to understand what problem it solves, what makes it hard to build, where it still falls short, and which real products already do it.
 
 ## 1. Coding assistants
 
-This is the area our whole course is about, so I started here. A coding assistant lives inside the programmer's editor and suggests code as they type, or writes whole functions from a plain-English description. The appeal is obvious: it removes a lot of boring, repetitive typing and helps beginners get unstuck.
+A coding assistant lives inside the programmer's editor and suggests code as they type, or writes whole functions from English description. The appeal is obvious: it removes a lot of boring and repetitive typing and helps beginners get unstuck.
 
-Where it gets tricky is context — the tool has to understand a big existing project to give useful suggestions, not just generic snippets. And the main weakness is trust: the suggested code can look perfectly fine but be wrong or insecure, so you still have to read and check everything yourself.
+Where it gets tricky is context — the tool has to understand a big existing project to give useful suggestions. And the main weakness is trust, because the suggested code can look perfectly fine but be wrong or insecure, so you still have to read and check everything yourself.
 
 Real products:
 - GitHub Copilot — https://github.com/features/copilot — suggests code and functions right inside the editor.
@@ -31,9 +31,9 @@ Real products:
 
 ## 3. Searching company knowledge (RAG)
 
-This one surprised me. Big companies have thousands of internal documents nobody can read through. RAG (retrieval-augmented generation) lets an employee just ask a question — the system finds the right internal documents first, then the model answers using them. So you can basically "chat" with the company's own files.
+Big companies have thousands of internal documents nobody can read through. RAG lets an employee just ask a question — the system finds the right internal documents, then the model answers using them. So you can basically chat with the company's own files.
 
-It only works as well as the search behind it: if the wrong documents get pulled, the answer is weak. Keeping private data secure is also a big concern here.
+It only works as well as the search behind it, if the wrong documents get pulled, the answer is weak. Keeping private data secure is also a big concern here.
 
 Real products:
 - Glean — https://www.glean.com — searches across all of a company's apps and documents.
@@ -42,9 +42,9 @@ Real products:
 
 ## 4. Writing and marketing content
 
-GenAI can draft blog posts, product descriptions, ads, and social media captions. A person sets the goal and tone, the model produces a first draft, and the human edits it. It saves time and makes it cheap to try many versions, which marketers love.
+GenAI can draft blog posts, product descriptions, ads, and social media captions. A person sets the goal and tone, the model produces a first draft, and the human edits it. It saves time and makes it cheap to try many versions.
 
-The honest downside is that the output often sounds generic, and it can state things that aren't true. It's a starting point, not a finished piece.
+The honest downside is that the output often sounds generic, and it can state things that aren't true.
 
 Real products:
 - Jasper — https://www.jasper.ai — generates on-brand marketing content.
@@ -66,7 +66,7 @@ Real products:
 
 This is the most advanced one. Instead of answering a single question, an "agent" plans and carries out a task across several steps — it can create files, run code, call other tools, and report back with little supervision. Our course even mentions building one on EPAM's own platform.
 
-The problem is reliability: over many steps there are many chances to make a mistake, and an agent with real access to systems can cause real damage if it goes wrong. These are harder to trust than a simple chatbot.
+The problem is reliability, over many steps there are many chances to make a mistake, and an agent with real access to systems can cause real damage if it goes wrong. These are harder to trust than a simple chatbot.
 
 Real products:
 - CodeMie — https://codemie.lab.epam.com — EPAM's platform for building AI agents and workflows.
@@ -75,4 +75,4 @@ Real products:
 
 ## What I took away
 
-The pattern is pretty clear: generative AI speeds up anything that involves language, code, or content. The repeating risks are also clear — it can make things up, private data has to be protected, and people can start trusting it too much. So the real skill isn't just using a model, it's knowing when to double-check it.
+The pattern is pretty clear: generative AI speeds up anything that involves language, code, or content. The repeating risks are also clear — it can make things up, private data has to be protected, and people can start trusting it too much. So the real skill is knowing when to double-check it.
