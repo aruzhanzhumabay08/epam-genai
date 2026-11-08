@@ -1,95 +1,78 @@
-# Research Report: Generative AI Applications
+# Research on Generative AI Applications
 
-**Author:** Aruzhan Zhumabay
-**Program:** EPAM Tech Orda — Generative AI for Software Development
-**Module:** Introduction
+By Aruzhan Zhumabay
+EPAM Tech Orda — GenAI for Software Development, Introduction module
 
----
+## Why I picked these cases
 
-## Introduction
+I'm new to this field, so for this report I looked at where generative AI is actually being used today, not just the theory. I focused on six areas that kept coming up while I was reading. For each one I tried to understand what problem it solves, what makes it hard to build, where it still falls short, and which real products already do it.
 
-Generative AI (GenAI) refers to a class of artificial intelligence systems that create new content — text, code, images, audio, or structured data — rather than only classifying or predicting from existing data. Most modern GenAI systems are built on large language models (LLMs) trained on very large datasets. This report surveys several real-world application areas, describing for each the business value it creates, the main technical challenges, its weak points, and existing implementations.
+## 1. Coding assistants
 
----
+This is the area our whole course is about, so I started here. A coding assistant lives inside the programmer's editor and suggests code as they type, or writes whole functions from a plain-English description. The appeal is obvious: it removes a lot of boring, repetitive typing and helps beginners get unstuck.
 
-## 1. AI-Assisted Software Development (Code Generation)
+Where it gets tricky is context — the tool has to understand a big existing project to give useful suggestions, not just generic snippets. And the main weakness is trust: the suggested code can look perfectly fine but be wrong or insecure, so you still have to read and check everything yourself.
 
-AI coding assistants suggest, complete, and generate source code directly inside a developer's editor. A developer describes what they want in natural language or starts typing, and the model proposes the next lines, whole functions, or tests. This use case is central to the software industry because it directly shortens the time between an idea and working code.
+Real products:
+- GitHub Copilot — https://github.com/features/copilot — suggests code and functions right inside the editor.
+- Cursor — https://cursor.com — a code editor built around AI chat that knows your whole project.
+- Amazon Q Developer — https://aws.amazon.com/q/developer/ — AWS's assistant for writing and debugging code.
 
-**Business value:** Faster development, fewer repetitive tasks, lower onboarding time for junior developers, and more consistent code. Studies by vendors report meaningful productivity gains on routine coding tasks. **Technical challenges:** Keeping suggestions correct and secure, giving the model enough context about a large codebase, and integrating smoothly into existing tools. **Weak points:** The model can produce confident but wrong or insecure code ("hallucinations"), may leak patterns from training data, and can make developers over-rely on suggestions without understanding them.
+## 2. Customer support bots
 
-**Existing implementations:**
-- **GitHub Copilot** — https://github.com/features/copilot — An AI pair programmer that suggests code and whole functions inside the editor.
-- **Amazon Q Developer** — https://aws.amazon.com/q/developer/ — AWS's assistant for writing, testing, and debugging code.
-- **Cursor** — https://cursor.com — An AI-first code editor built around chat and codebase-aware editing.
+Most of us have chatted with a support bot. The new generation runs on language models, so instead of only matching keywords, they actually understand different ways of asking the same thing and pull answers from the company's own help pages. For a business this means support around the clock and lower costs, while human agents handle the hard cases.
 
----
+The catch is accuracy. If the bot gives a wrong or outdated answer confidently, it frustrates customers more than no bot at all. And it still struggles with very specific account problems.
 
-## 2. Customer Support Assistants (Chatbots)
+Real products:
+- Intercom Fin — https://www.intercom.com/fin — answers customer questions from a company's help content.
+- Zendesk AI — https://www.zendesk.com/service/ai/ — AI built into Zendesk's support platform.
+- Ada — https://www.ada.cx — automates customer service conversations.
 
-GenAI chatbots answer customer questions in natural language, resolve common issues, and escalate harder cases to human agents. Unlike older rule-based bots, LLM-based assistants understand varied phrasing and can hold a coherent conversation, often pulling answers from a company's own documentation.
+## 3. Searching company knowledge (RAG)
 
-**Business value:** Lower support costs, 24/7 availability, faster response times, and freeing human agents for complex problems. **Technical challenges:** Grounding answers in accurate company data, handling many languages, and keeping responses on-topic and safe. **Weak points:** Risk of giving wrong or outdated answers, difficulty with highly specific account issues, and customer frustration when the bot cannot escalate properly.
+This one surprised me. Big companies have thousands of internal documents nobody can read through. RAG (retrieval-augmented generation) lets an employee just ask a question — the system finds the right internal documents first, then the model answers using them. So you can basically "chat" with the company's own files.
 
-**Existing implementations:**
-- **Intercom Fin** — https://www.intercom.com/fin — An AI support agent that resolves customer questions using a company's help content.
-- **Zendesk AI** — https://www.zendesk.com/service/ai/ — AI features built into Zendesk's customer service platform.
-- **Ada** — https://www.ada.cx — An AI-powered customer service automation platform.
+It only works as well as the search behind it: if the wrong documents get pulled, the answer is weak. Keeping private data secure is also a big concern here.
 
----
+Real products:
+- Glean — https://www.glean.com — searches across all of a company's apps and documents.
+- Microsoft 365 Copilot — https://www.microsoft.com/microsoft-365/copilot — answers using your company's files inside Office.
+- Notion AI — https://www.notion.so/product/ai — answers questions from a team's Notion workspace.
 
-## 3. Enterprise Knowledge Assistants (RAG)
+## 4. Writing and marketing content
 
-Retrieval-Augmented Generation (RAG) combines an LLM with a company's private documents. When a user asks a question, the system first retrieves the most relevant internal documents and then asks the model to answer using them. This lets employees "chat" with company knowledge — policies, manuals, reports — without reading everything manually.
+GenAI can draft blog posts, product descriptions, ads, and social media captions. A person sets the goal and tone, the model produces a first draft, and the human edits it. It saves time and makes it cheap to try many versions, which marketers love.
 
-**Business value:** Faster access to internal knowledge, reduced time spent searching, and better decisions based on current company data. **Technical challenges:** Building a good search/retrieval layer, keeping documents up to date, and controlling who can access which data. **Weak points:** If retrieval returns poor documents, the answer is weak; models can still hallucinate; and sensitive data must be carefully protected.
+The honest downside is that the output often sounds generic, and it can state things that aren't true. It's a starting point, not a finished piece.
 
-**Existing implementations:**
-- **Glean** — https://www.glean.com — An AI-powered work assistant that searches across a company's apps and documents.
-- **Microsoft 365 Copilot** — https://www.microsoft.com/microsoft-365/copilot — An assistant integrated into Office apps that answers using company data.
-- **Notion AI** — https://www.notion.so/product/ai — AI features that answer questions and generate content from a team's Notion workspace.
+Real products:
+- Jasper — https://www.jasper.ai — generates on-brand marketing content.
+- Copy.ai — https://www.copy.ai — writes sales and marketing copy.
+- Canva Magic Studio — https://www.canva.com/magic-studio/ — AI design and text tools inside Canva.
 
----
+## 5. Summarizing long documents
 
-## 4. Content Creation and Marketing
+Lawyers, analysts, and researchers read enormous documents. GenAI can summarize a long contract or report in seconds and answer specific questions about it. That saves hours.
 
-GenAI generates marketing copy, blog posts, product descriptions, social media content, and images. Marketers describe the goal, tone, and audience, and the model drafts content that a human then reviews and edits.
+But in serious fields like law or finance, a summary that quietly drops an important detail can be expensive, so people can't fully rely on it yet.
 
-**Business value:** Faster content production, lower cost per asset, easy personalization and localization, and more creative options to test. **Technical challenges:** Keeping brand voice consistent, avoiding factual errors, and generating truly original rather than generic content. **Weak points:** Output can feel generic or repetitive, may contain mistakes, and raises copyright and originality concerns.
+Real products:
+- Harvey — https://www.harvey.ai — a GenAI assistant built for legal work.
+- Hebbia — https://www.hebbia.com — analyzes large sets of financial documents.
+- ChatPDF — https://www.chatpdf.com — lets you ask questions about any uploaded PDF.
 
-**Existing implementations:**
-- **Jasper** — https://www.jasper.ai — A marketing-focused platform for generating on-brand content.
-- **Copy.ai** — https://www.copy.ai — A tool for generating marketing and sales copy.
-- **Canva Magic Studio** — https://www.canva.com/magic-studio/ — AI design and content tools inside Canva.
+## 6. AI agents
 
----
+This is the most advanced one. Instead of answering a single question, an "agent" plans and carries out a task across several steps — it can create files, run code, call other tools, and report back with little supervision. Our course even mentions building one on EPAM's own platform.
 
-## 5. Document Summarization and Analysis
+The problem is reliability: over many steps there are many chances to make a mistake, and an agent with real access to systems can cause real damage if it goes wrong. These are harder to trust than a simple chatbot.
 
-GenAI reads long documents — contracts, reports, research papers, meeting transcripts — and produces short summaries, extracts key points, or answers specific questions about them. This is valuable in law, finance, research, and any field with heavy reading.
+Real products:
+- CodeMie — https://codemie.lab.epam.com — EPAM's platform for building AI agents and workflows.
+- LangChain — https://www.langchain.com — a framework for building LLM apps and agents.
+- Zapier AI — https://zapier.com/ai — automates tasks across many connected apps.
 
-**Business value:** Saves professionals hours of reading, surfaces key information quickly, and makes large document sets usable. **Technical challenges:** Handling very long documents, staying accurate on critical details, and processing different file formats. **Weak points:** Summaries can miss or distort important nuances, and errors in high-stakes documents (legal, medical) can be costly.
+## What I took away
 
-**Existing implementations:**
-- **Harvey** — https://www.harvey.ai — A GenAI assistant built for legal work and document analysis.
-- **Hebbia** — https://www.hebbia.com — An AI platform for analyzing large sets of financial and business documents.
-- **ChatPDF** — https://www.chatpdf.com — A simple tool to ask questions about an uploaded PDF.
-
----
-
-## 6. AI Agents and Workflow Automation
-
-AI agents go beyond single answers: they plan and carry out multi-step tasks by calling tools, APIs, and other systems. For example, an agent might read a task, create files, run code, and report results — with limited human supervision.
-
-**Business value:** Automates complex, multi-step work, reduces manual effort, and can operate continuously. **Technical challenges:** Reliability over many steps, safe access to real systems, and recovering from mistakes without human help. **Weak points:** Agents can fail or loop on complex tasks, take wrong actions if poorly constrained, and are harder to test and trust than simple assistants.
-
-**Existing implementations:**
-- **CodeMie** — https://codemie.lab.epam.com — EPAM's platform for building and running AI agents and workflows.
-- **LangChain / LangGraph** — https://www.langchain.com — A framework for building applications and agents powered by LLMs.
-- **Zapier AI** — https://zapier.com/ai — AI-driven automation across thousands of connected apps.
-
----
-
-## Conclusion
-
-Generative AI is already delivering real value across software development, customer service, knowledge management, marketing, document analysis, and automation. The common pattern is clear: GenAI accelerates work that involves language, code, or content. The common risks are also clear — hallucinations, data privacy, and over-reliance. Successful adoption depends not only on the models themselves but on grounding them in reliable data, keeping humans in the loop, and carefully handling security and accuracy.
+The pattern is pretty clear: generative AI speeds up anything that involves language, code, or content. The repeating risks are also clear — it can make things up, private data has to be protected, and people can start trusting it too much. So the real skill isn't just using a model, it's knowing when to double-check it.

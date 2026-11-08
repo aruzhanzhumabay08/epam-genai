@@ -1,49 +1,46 @@
-# Vocabulary: Generative AI Terms
+# My GenAI Vocabulary
 
-**Author:** Aruzhan Zhumabay
-**Program:** EPAM Tech Orda — Generative AI for Software Development
-**Module:** Introduction
+By Aruzhan Zhumabay
+EPAM Tech Orda — GenAI for Software Development, Introduction module
 
-A list of key terms I should know and use as someone learning to build and use Generative AI applications. Definitions are written in simple words based on my current understanding. I will expand this list as the course continues.
+These are the terms I kept running into while writing my report. I wrote each one in my own words, the way I'd explain it to a friend who's also just starting. I'll keep adding to this list as the course goes on.
 
----
+1. **Generative AI** — AI that makes new things (text, code, pictures) instead of just sorting or labeling what already exists.
 
-1. **Generative AI (GenAI)** — Artificial intelligence that creates new content (text, code, images, audio) instead of only sorting or predicting existing data.
+2. **Large Language Model (LLM)** — a huge AI trained on tons of text that can read and write language almost like a person.
 
-2. **Large Language Model (LLM)** — A very large AI model trained on huge amounts of text that can understand and generate human-like language.
+3. **Token** — a small chunk of text (a word or part of a word) that the model reads and produces. Models count everything in tokens.
 
-3. **Token** — A small piece of text (a word or part of a word) that a language model reads and produces. Models measure input and output in tokens.
+4. **Prompt** — what you type to tell the AI what you want. Basically your request.
 
-4. **Prompt** — The instruction or question you give to an AI model to tell it what you want.
+5. **Prompt engineering** — the skill of writing your request well so you get a better answer back.
 
-5. **Prompt Engineering** — The skill of writing clear, well-structured prompts to get better answers from an AI model.
+6. **Hallucination** — when the AI says something that sounds confident but is actually made up or wrong. The thing you always have to watch for.
 
-6. **Hallucination** — When an AI model gives an answer that sounds confident but is actually wrong or made up.
+7. **RAG (retrieval-augmented generation)** — first the system finds the right documents, then the AI answers using them. This keeps answers tied to real data.
 
-7. **Retrieval-Augmented Generation (RAG)** — A method where the AI first finds relevant documents and then uses them to answer, so the response is grounded in real data.
+8. **Fine-tuning** — taking a ready model and training it a bit more on specific data so it's better at one particular job.
 
-8. **Fine-tuning** — Training an existing model further on specific data so it performs better on a particular task or domain.
+9. **Context window** — how much text the model can keep in its "head" at once. If a document is too long, it won't all fit.
 
-9. **Context Window** — The maximum amount of text (tokens) a model can consider at one time when answering.
+10. **Inference** — the moment the trained model actually gives you an answer (as opposed to when it was being trained).
 
-10. **Inference** — The step where a trained model actually produces an answer from your input (as opposed to the training step).
+11. **Embedding** — turning text into a list of numbers so the computer can tell which pieces of text mean similar things.
 
-11. **Embedding** — A way of turning text into a list of numbers so that similar meanings end up close together; used for search and retrieval.
+12. **AI agent** — an AI that doesn't just answer once but can plan and do a multi-step task by itself, using tools along the way.
 
-12. **AI Agent** — An AI system that can plan and carry out multi-step tasks by using tools and taking actions, not just answering once.
+13. **Temperature** — a dial for how creative vs. predictable the answers are. Low = safe and boring, high = more random.
 
-13. **Temperature** — A setting that controls how creative or random a model's output is; low means safe and predictable, high means more varied.
+14. **Copilot** — an AI helper that works next to you (often a programmer) and suggests the next step.
 
-14. **Copilot** — An AI assistant that works alongside a person (often a developer) to suggest and help complete tasks.
+15. **Grounding** — tying the AI's answers to real, trusted sources so it's less likely to invent things.
 
-15. **Grounding** — Connecting a model's answers to reliable, real sources of data so it is less likely to make things up.
+16. **Multimodal** — a model that can handle more than one type of thing, like text and images together.
 
-16. **Multimodal** — An AI model that can work with more than one type of input or output, such as text and images together.
+17. **API** — a way for two programs to talk to each other. It's how apps connect to AI models.
 
-17. **API (Application Programming Interface)** — A way for one piece of software to talk to another; used to connect apps to AI models.
+18. **Guardrails** — the rules put around an AI to keep it safe and on-topic.
 
-18. **Guardrails** — Rules and limits put around an AI system to keep its behavior safe, on-topic, and appropriate.
+19. **Open-source model** — an AI whose code is public, so anyone can use or change it.
 
-19. **Open-source model** — An AI model whose code and weights are publicly available, so anyone can use or modify it.
-
-20. **Vector Database** — A special database that stores embeddings and quickly finds items with similar meaning; often used in RAG systems.
+20. **Vector database** — a special database that stores embeddings and quickly finds text with similar meaning. Used a lot in RAG.
